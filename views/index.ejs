@@ -2,8 +2,9 @@
 
 <div class="container">
     <div class="image__container"></div>
+    
 
-    <div class="grid overflow-hidden grid-cols-4 grid-rows-1 mx-3 gap-2">
+    <div class="md:grid overflow-hidden grid-cols-4 grid-rows-1 mx-3 gap-2">
         <div class="box">
             <img src="img/img2.jpg" alt="">
             <h2>ABOUT US</h2>
@@ -22,12 +23,16 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla autem laudantium eveniet expedita magni, error blanditiis culpa nostrum, rerum sint tempore qui sed vero consequatur porro corrupti facilis fugit quos?</p></div>
     </div>
 
-    <div class="grid overflow-hidden grid-cols-3 grid-rows-1 mx-3">
+    <hr class="md:invisible">
+
+    <h2 class="visible md:invisible">First Blog</h2>
+    <div class="md:grid overflow-hidden grid-cols-3 grid-rows-1 mx-3">
+        <img src="img/img5.jpg" alt="" class="col-span-2 img-70 block md:hidden">
         <div class="p1 col-span-1">
-            <h2>First Blog</h2>
+            <h2 class="invisible md:visible">First Blog</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias et assumenda enim veritatis earum, dolor ipsa autem voluptatibus quod similique beatae omnis aliquam excepturi accusamus fugiat velit ducimus. Assumenda, ipsum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi aliquid tempore aliquam provident quos esse, adipisci repellat dignissimos alias sint maiores deleniti sit ratione ipsa! Dolores qui fugiat quisquam possimus.</p>
         </div>
-        <img src="img/img5.jpg" alt="" class="col-span-2 img-70">
+        <img src="img/img5.jpg" alt="" class="col-span-2 img-70 hidden md:block">
     </div>
 
     <h1 class="text-center px-3">Our Partners</h1>
@@ -50,4 +55,10 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.querySelector('.active').classList.remove("active");
+    document.querySelector('a[href="/"]').classList.add('active');
+</script>
+
 <%- include('footer') -%> 

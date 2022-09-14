@@ -14,9 +14,20 @@ hr{
     margin: 1rem auto;
     width: 95%;
 }
+
+@media only screen and (max-width: 768px){
+    hr{
+        width: 100%;
+    }
+
+    .socials{
+        text-align: left;
+    }
+}
 .container{
     margin:  auto;
     min-width: 100%;
+    max-width: 100%;
     padding: 1rem 3rem;
 }
 
@@ -108,7 +119,7 @@ h2{
 
 .socials a{
     display: inline-block;
-    padding: 0 1.5rem;
+    padding: 0 3%;
 }
 
 .about-text{
@@ -117,4 +128,19 @@ h2{
 
 .leaders img{
     width: 80%;
+}
+
+
+@media only screen and (max-width: 768px){
+    hr{
+        width: 100%;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+    .socials{
+        text-align: center;
+    }
 }

@@ -1,9 +1,10 @@
 <%- include('header') -%> 
-<link rel="stylesheet" href="/css/contact.css">
+
+<link rel="stylesheet" href="css/contact.css">
 
 <h1 class="text-center">Contact Us</h1>
     <div class="container">
-        <div class="grid grid-cols-2 gap-20 contact">
+        <div class="md:grid grid-cols-2 gap-20 contact">
 
             <div class="col-span-1 contact-img">
                 <h2>Address</h2>
@@ -16,6 +17,7 @@
                 <p>unicsa.uonbi@gmail.com</p>
                 
             </div>
+            <hr class="md:hidden">
 
             <div class="col-span-1 contact-form">
                 <form action="mailto:unicsa.uonbi@gmail.com" id="contact-form" enctype="text/plain"> 
@@ -34,5 +36,10 @@
 
         </div>
     </div>
+
+    <script>
+        document.querySelector('.active').classList.remove("active");
+        document.querySelector('a[href="/contact"]').classList.add('active');
+    </script>
 
 <%- include('footer') -%> 
