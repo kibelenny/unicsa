@@ -1,0 +1,38 @@
+<%- include('header') -%> 
+<link rel="stylesheet" href="/css/contact.css">
+
+<h1 class="text-center">Contact Us</h1>
+    <div class="container">
+        <div class="grid grid-cols-2 gap-20 contact">
+
+            <div class="col-span-1 contact-img">
+                <h2>Address</h2>
+                <p>30197-00100, GPO, Nairobi, Kenya</p>
+
+                <h2>Telephone Number</h2>
+                <p>(+254-20) 491 0000</p>
+
+                <h2>Email</h2>
+                <p>unicsa.uonbi@gmail.com</p>
+                
+            </div>
+
+            <div class="col-span-1 contact-form">
+                <form action="mailto:unicsa.uonbi@gmail.com" id="contact-form" enctype="text/plain"> 
+                    <label for="fname">Enter Full Name</label> <br>
+                    <input type="text" placeholder="Name" required name="fname"> <br>
+        
+                    <label for="email">Enter Email</label> <br>
+                    <input type="email" name="email" id="pwd" required name="email" placeholder="Email"> <br>
+
+                    <label for="message">Enter Message</label> <br>
+                    <textarea name="message" id="message" cols="30" rows="10" form="contact-form"></textarea> <br>
+        
+                    <button type="submit">Contact Us</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+<%- include('footer') -%> 

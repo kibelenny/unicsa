@@ -1,0 +1,120 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    color: #303A2B;
+    background-color: #F9F7F7;
+    font-family: 'Inter', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+hr{
+    background-color: #a5a3a3;
+    border-style: none;
+    height: 1px;
+    margin: 1rem auto;
+    width: 95%;
+}
+.container{
+    margin:  auto;
+    min-width: 100%;
+    padding: 1rem 3rem;
+}
+
+h1{
+    font-family: 'David Libre', serif;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #3F72AF;
+    padding: 0.5rem 0;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.navbar__menu{
+    padding-bottom: 1.5rem;
+    padding-top: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar__menu a{
+    padding: 1%;
+    text-decoration: none;
+    color: #303A2B;    
+}
+
+.navbar__toggle{
+    display: none;
+}
+
+.navbar__menu .active{
+    color: #3F72AF;
+}
+
+.navbar__menu a:hover{
+    color: #09B1E6;
+}
+
+.navbar__img img{
+    height: 80px;
+    width: 80px;
+}
+
+.image__container{
+    width: 100%;
+    border: 1px solid black;
+    height:  600px;
+}
+
+.box{
+    margin: 2rem auto;
+    width: 100%;
+}
+
+img{
+    margin: 0.5rem auto;
+    width: 100%;
+    height: auto;
+}
+
+h2{
+    font-weight: bolder;
+    color: #3F72AF;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+
+
+
+
+.footer{
+    background-color: #112D4E;
+    padding: 1rem 3rem;
+    color: rgb(209, 209, 209);
+    font-weight: 100;
+    font-size: 0.8em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.img-70{
+    width: 70%;
+}
+
+ .socials{
+    text-align: right;
+}
+
+.socials a{
+    display: inline-block;
+    padding: 0 1.5rem;
+}
+
+.about-text{
+    padding: 1rem 0.5rem;
+}
+
+.leaders img{
+    width: 80%;
+}
