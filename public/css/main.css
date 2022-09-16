@@ -15,15 +15,6 @@ hr{
     width: 95%;
 }
 
-@media only screen and (max-width: 768px){
-    hr{
-        width: 100%;
-    }
-
-    .socials{
-        text-align: left;
-    }
-}
 .container{
     margin:  auto;
     min-width: 100%;
@@ -74,14 +65,20 @@ h1{
 
 .image__container{
     width: 100%;
-    border: 1px solid black;
-    height:  600px;
+    /* border: 1px solid black; */
+    max-height:  600px;
+}
+
+.image__container img{
+    max-height: inherit;
 }
 
 .box{
     margin: 2rem auto;
     width: 100%;
+    padding: 1.5%;
 }
+
 
 img{
     margin: 0.5rem auto;
@@ -129,6 +126,17 @@ h2{
 .leaders img{
     width: 80%;
 }
+a{
+    color: #3F72AF;
+}
+
+a:hover{
+    color: #09B1E6;
+}
+
+ul {
+    list-style-type: circle;
+  }
 
 
 @media only screen and (max-width: 768px){
