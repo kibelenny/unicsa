@@ -19,7 +19,7 @@ function dataDump(){
     const about = "Is a student body that was established in 2007  mandated to harness full potential of members through involvement and engagement in activities that enhance  academic excellence and quality of life by organizing frequent fora, exchange programs and community";
     const memebrship = "-Privilege to attend industrial visits regularly, Chapter, branch or group activities. -Only registered members are eligible to participate in the association’s activities, chapter, branch or group activities.";
     const advocacy = "To harness the full potentials of the members through involvement in activities that will enhance academic excellence and professional practice through; -organizing frequent seminars . -Organizing internship and attachment placements. -Exchange programmes &amp; field trips.";
-    const vision = "o be an internationally recognized student body with an enabling environment conducive for assured excellence in academics, socio-economic and leadership aspects with a view to enhancing competence in service delivery that meets the changing demands in our contemporary society.";
+    const vision = "To be an internationally recognized student body with an enabling environment conducive for assured excellence in academics, socio-economic and leadership aspects with a view to enhancing competence in service delivery that meets the changing demands in our contemporary society.";
 
     return {
         'about' : about,
