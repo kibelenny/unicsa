@@ -1,14 +1,34 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const posts = require(__dirname + '/public/js/blog.js').sendPosts()
-const dataDump = require(__dirname + '/public/js/blog.js').dataDump()
-const lodash = require("lodash")
+const posts = require(__dirname + '/public/js/blog.js').sendPosts();
+const dataDump = require(__dirname + '/public/js/blog.js').dataDump();
+const lodash = require("lodash");
+const mongoose = require('mongoose');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
+
+//Mongoose
+mongoose.connect("mongodb://localhost:27017/uncsaDB")
+
+const blogSchema = new mongoose.Schema({
+    title : {
+        type : String,
+        required : [true, 'Missing blog title']
+    },
+    body : {
+        type : String,
+        required : [true, 'Missing blog body']
+    }
+})
+
+const Blog = mongoose.model('Blog', blogSchema);
+
+
+//GET Requests
 app.get("/", function(req, res){
     res.render("index", {posts: posts,
                         data : dataDump})
