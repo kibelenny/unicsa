@@ -39,7 +39,13 @@ app.get("/about", function(req, res){
 })
 
 app.get("/blog", function(req, res){
-    res.render("blog", {posts : posts})
+    Blog.find(function(err, data){
+        if(!err){
+            res.render('test', {data : data})
+        }else{
+            console.log(err);
+        }
+    })
 })
 
 app.get("/contact", function(req, res){
@@ -54,13 +60,32 @@ app.get("/advocacy", function(req, res){
     res.render('advocacy')
 })
 
-app.get('/:title', function(req, res){
-    if(posts[req.params.title] !== undefined){
-        res.render('blogposts', {blogTitle : req.params.title,
-                                blogPost : posts[req.params.title]})
-    }
+app.get("/compose", function(req, res){
+    res.render("compose");
 })
 
+app.get('/:title', function(req, res){
+    Blog.find({title : req.params.title}, function(err, data){
+        if (!err){
+            res.render('blogposts', {data : data})
+        }else{
+            console.log(err);
+        }
+    })
+})
+
+
+//POST requests
+app.post('/compose', function(req, res){
+    const newBlog = new Blog({
+        title : req.body.title,
+        body : req.body.body 
+    })
+
+    newBlog.save()
+
+    res.redirect('/compose')
+})
 
 app.listen(3000, function(){
     console.log("Server Running on Port 3000")

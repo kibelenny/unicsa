@@ -1,12 +1,17 @@
 <%- include('header') -%> 
+
+<% data.forEach(function(item){ %> 
+
 <div class="container">
     <h1>
-        <%= blogTitle %> 
+        <%= item.title %>  
     </h1>
     <p>
-        <%= blogPost %> 
+        <%= item.body %> 
     </p>
 </div>
+
+<% }) %> 
 
 <script>
     document.querySelector('.active').classList.remove("active");
